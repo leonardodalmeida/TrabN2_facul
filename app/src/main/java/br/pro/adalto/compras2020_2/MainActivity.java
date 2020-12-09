@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Produto prodSelecionado = (Produto) adapterView.getItemAtPosition( i );
 
-                Intent intent = new Intent(MainActivity.this , FormularioActivity.class);
+                Intent intent = new Intent(MainActivity.this , AbasteceActivity2.class);
                 intent.putExtra("acao" , "editar");
                 intent.putExtra("idProduto" ,  prodSelecionado.getId() );
                 startActivity( intent );
