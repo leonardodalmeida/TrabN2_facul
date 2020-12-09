@@ -1,13 +1,19 @@
 package br.pro.adalto.compras2020_2;
 
+import java.time.LocalDateTime;
+
 public class Abastecimento {
 
     private int id;
-    private String nome;
-    private date KM_abastecimento;
-    private double tanque;
-    private double litrosA;
-    private double mediaKM;
+    private int veiculo_id;
+    private LocalDateTime Dt_Abastecimento;
+    private double kmAbastecimento_veiculo;
+    private double precoGas;
+    private double precoEta;
+    private double capacidade_tanque;
+    private String Combs_indicado;
+    private String Combs_selecionado;
+    private double L_abastecidos;
 
     public Abastecimento() {
 
@@ -18,7 +24,7 @@ public class Abastecimento {
 //        this.KM_atual = KM_atual;
 //    }
 
-    public Abastecimento(int id, String veiculo_id, double KM_atual, double tanque, double mediaKM) {
+    public Abastecimento(int id, int veiculo_id, LocalDateTime Dt_Abastecimento, double kmAbastecimento_veiculo, double precoGas, double precoEta, double capacidade_tanque, String Combs_indicado, String Combs_selecionado, double L_abastecidos) {
         this.id = id;
         this.veiculo_id = veiculo_id;
         this.Dt_Abastecimento = Dt_Abastecimento;
@@ -49,54 +55,78 @@ public class Abastecimento {
         this.id = id;
     }
 
-    public String getNome() {
-        return nome;
+    public int getId_veiculo() {
+        return veiculo_id;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setId_veiculo(int veiculo_id) {
+        this.veiculo_id = veiculo_id;
     }
 
-    public double getKM_atual() {
-        return KM_atual;
+    public LocalDateTime getDt_Abastecimento() {
+        return Dt_Abastecimento;
     }
 
-    public void setKM_atual(double KM_atual) {
-        this.KM_atual = KM_atual;
+    public void setDt_Abastecimento(LocalDateTime Dt_Abastecimento) {
+        this.Dt_Abastecimento = Dt_Abastecimento;
     }
+
+    public double getprecoGas() {
+        return precoGas;
+    }
+
+    public void setprecoGas(double precoGas) {
+        this.precoGas = precoGas;
+    }
+
+    public double getprecoEta() {
+        return precoGas;
+    }
+
+    public void getprecoEta(double precoEta) {
+        this.precoEta = precoEta;
+    }
+
+    public String getCombs_indicado() {
+        return Combs_indicado;
+    }
+
+    public void setCombs_indicado(String Combs_indicado) {
+        this.Combs_indicado = Combs_indicado;
+    }
+
+    public String getCombs_selecionado() {
+        return Combs_selecionado;
+    }
+
+    public void setCombs_selecionado(String Combs_selecionado) {
+        this.Combs_selecionado = Combs_selecionado;
+    }
+
 
     public double getKM_abastecimento() {
-        return KM_abastecimento;
+        return kmAbastecimento_veiculo;
     }
 
-    public void setKM_abastecimento(double KM_abastecimento) {
-        this.KM_abastecimento = KM_abastecimento;
+    public void setKM_abastecimento(double kmAbastecimento_veiculo) {
+        this.kmAbastecimento_veiculo = kmAbastecimento_veiculo;
     }
 
 
     public double getTanque() {
-        return tanque;
+        return capacidade_tanque;
     }
 
-    public void setTanque(double tanque) {
-        this.tanque = tanque;
+    public void setTanque(double capacidade_tanque) {
+        this.capacidade_tanque = capacidade_tanque;
     }
-
-    public double getmediaKM() {
-        return mediaKM;
-    }
-
-    public void setmediaKM(double mediaKM) {
-        this.mediaKM = mediaKM;
-    }
-
 
     public double getLitrosAbastecidos() {
-        return litrosA;
+        return L_abastecidos;
     }
 
-    public void setLitrosAbastecidos(double litrosA) {
-        this.litrosA = litrosA;
+    public void setLitrosAbastecidos(double L_abastecidos) {
+        this.L_abastecidos = L_abastecidos;
     }
 
 
